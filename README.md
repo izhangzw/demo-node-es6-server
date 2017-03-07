@@ -1,4 +1,4 @@
-帮助您快速搭建兼容ES6语法的node环境
+<h1>帮助您快速搭建兼容ES6语法的node环境</h1>
 babel
 npm init
 npm install --save-dev babel-cli
