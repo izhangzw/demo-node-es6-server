@@ -23,11 +23,30 @@ http.createServer((request, response) =&gt; {
 console.log(`启动成功! - http://${HOST}:${PORT}/`);
 </pre></div>
 
-<p>修改package.json, 添加一行如下</p>
+<p>修改package.json</p>
 <div class="highlight highlight-source-diff">
 <pre>  "scripts": {
+-   "start": "babel-node index.js"
 +   "start": "babel-node index.js --presets es2015,stage-2"
   }</pre></div>
 
 <p>最后, 启动服务</p>
 <div class="highlight highlight-source-shell"><pre>$ npm start</pre></div>
+
+
+<hr/>
+<h3>您可能还会需要<code>nodemon</code></h3>
+<hr/>
+
+<p>监听文件修改,自动重启服务<code>nodemon</code></p>
+<div class="highlight highlight-source-shell"><pre>$ npm install --save-dev nodemon</pre></div>
+
+<p>修改package.json</p>
+<div class="highlight highlight-source-diff">
+<pre>
+  "scripts": {
+-   "start": "babel-node index.js --presets es2015,stage-2"
++   "start": "nodemon index.js --exec babel-node --presets es2015,stage-2"
+  }
+</pre>
+</div>
