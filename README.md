@@ -1,5 +1,6 @@
-<h1>帮助您快速搭建兼容ES6语法的node环境</h1>
-<p>babel</p>
+<h1>帮助您快速搭建兼容ES6语法的node环境(使用<a href="http://babeljs.cn/" target="_blank">babel</a>)</h1>
+<h3>开始吧</h3>
+<p>进入你的工程目录下, 初始化一个工程, 将生成一个package.json文件</p>
 <div class="highlight highlight-source-shell"><pre>$ npm init</pre></div>
 <div class="highlight highlight-source-shell"><pre>$ npm install --save-dev babel-cli</pre></div>
 <div class="highlight highlight-source-shell"><pre>$ npm install --save-dev babel-preset-es2015 babel-preset-stage-2</pre></div>
@@ -16,14 +17,10 @@ const HOST = '127.0.0.1';
 
 <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">`</span>启动成功! - http://${HOST}:${PORT}/<span class="pl-pds">`</span></span>);</pre></div>
 
+<p>修改package.json</p>
+<div class="highlight highlight-source-diff"><pre>  "scripts": {
+<span class="pl-mi1"><span class="pl-mi1">+</span>   "start": "babel-node index.js --presets es2015,stage-2"</span>
+  }</pre></div>
 
-
-
-修改package.json
-{
-  scripts: {
- +  "start": "babel-node index.js --presets es2015,stage-2"
-  }
-}
-
-npm start
+<p>最后</p>
+<div class="highlight highlight-source-shell"><pre>$ npm start</pre></div>
