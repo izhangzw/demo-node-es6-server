@@ -1,4 +1,4 @@
-<h1>帮助您快速搭建兼容ES6语法的node环境(使用<a href="http://babeljs.cn/" target="_blank">babel</a>)</h1>
+<h1>快速搭建兼容ES6语法的node环境(使用<a href="http://babeljs.cn/" target="_blank">babel</a>)</h1>
 <h3>开始吧</h3>
 
 <p>进入你的工程目录下, 初始化一个工程, 将生成一个package.json文件</p>
@@ -35,8 +35,7 @@ console.log(`启动成功! - http://${HOST}:${PORT}/`);
 
 
 <hr/>
-<h3>您可能还会需要<code>nodemon</code></h3>
-<hr/>
+<h3>你可能还会需要<code>nodemon</code></h3>
 
 <p>监听文件修改,自动重启服务<code>nodemon</code></p>
 <div class="highlight highlight-source-shell"><pre>$ npm install --save-dev nodemon</pre></div>
